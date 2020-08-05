@@ -2,11 +2,13 @@
 
 <head>
     <title>Comments</title>
-    
+    <link rel="stylesheet" href="css/commentstyles.css">
 
 </head>
 
 <body>
+
+<a href="index.php">Post a Comment</a>
     
     <?php
     session_start();
@@ -22,9 +24,9 @@
 
     if($result -> num_rows>0){
         while($row=$result->fetch_assoc()){ ?>
-            <div>
-            <h3><?php echo" ". $row["name"] ." ";?></h3>
-            <h4><?php echo" ". $row["email"] ." ";?></h4>
+            <div id="box" class="box">
+            <h4><?php echo" ". $row["name"] ." ";?></h4>
+            <h5><?php echo" ". $row["email"] ." ";?></h5>
             <h3><?php echo" ". $row["comment"] .""; ?></h3>
             </div>  <?php 
         }
@@ -41,5 +43,8 @@
 
 
 </body>
+
+
+
 
 </html> 

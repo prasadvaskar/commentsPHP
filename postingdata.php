@@ -17,7 +17,7 @@ $sql = "INSERT INTO userdetails (name,email,comment)
 VALUES('$name','$email','$comment')";
 if (mysqli_query($conn, $sql)) {
     
-    header('Refresh: 3; URL=commentpage.php');
+    header('Refresh: 3; URL=load.php');
  } else {
     echo "Error: " . $sql . "
 " . mysqli_error($conn);
