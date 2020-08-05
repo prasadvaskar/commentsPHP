@@ -9,7 +9,8 @@
 <body>
     
     <?php
-    
+    session_start();
+    require_once('connection.php');
     $conn = mysqli_connect("localhost","root","","UserData");
     if($conn-> connect_error){
         die("Connection Faile:". $conn -> connect_error);
@@ -20,10 +21,14 @@
 
 
     if($result -> num_rows>0){
-        while($row=$result->fetch_assoc()){
-            echo "<tr><td>". $row["name"] ."</td><td>". $row["email"] ."</td><td>". $row["comment"] ."</td></tr>" ;
+        while($row=$result->fetch_assoc()){ ?>
+            <div>
+            <h3><?php echo" ". $row["name"] ." ";?></h3>
+            <h4><?php echo" ". $row["email"] ." ";?></h4>
+            <h3><?php echo" ". $row["comment"] .""; ?></h3>
+            </div>  <?php 
         }
-        echo "</table>";
+        
     }
 
     else{
@@ -33,8 +38,8 @@
     $conn ->close();
     ?>
     
-    </table>
-    <a href="index.php">Home</a>
+
+
 </body>
 
 </html> 
