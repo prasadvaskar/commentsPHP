@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+#for1 {
+    margin-left: 40%;
+    width: 350px;
+    height: 400px;
+    margin-top: 10%;
+    padding-top: 3%;
+    background-image: linear-gradient(#e4e9ef, #696969);
+    font-family: 'Recursive', Regular 400;
+}
+
+input[type=text] {
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+#comment {
+    height: 200px;
+}
+
+input[type=email] {
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+#btn {
+    background-color: red;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+button[type=submit] {
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+#btn:hover {
+    background-color: green;
+}
+
+body {
+    background-image: url(images/bg1.jpg);
+}
